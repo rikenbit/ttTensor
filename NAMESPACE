@@ -1,0 +1,15 @@
+import(rTensor)
+import(tensorr)
+import(PTAk)
+import(Matrix)
+
+importFrom("methods", "as", "is")
+importFrom("stats", "runif")
+
+export(
+    TTSVD,
+    TTWOPT,
+    maxvol,
+    skeleton.decomp,
+    TTCross
+	)

@@ -1,0 +1,13 @@
+Package: ttTensor
+Type: Package
+Title: Tensor-Train Decomposition
+Version: 0.99.0
+Date: 2019-02-17
+Author: Koki Tsuyuzaki, Manabu Ishii, Itoshi Nikaido
+Maintainer: Koki Tsuyuzaki <k.t.the-answer@hotmail.co.jp>
+Suggests: testthat
+Depends: R (>= 3.5.0)
+Imports: methods, rTensor, tensorr, PTAk, Matrix
+Description: Some functions for performing tensor-train decomposition.
+License: Artistic-2.0
+URL: https://github.com/rikenbit/ttTensor

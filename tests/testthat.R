@@ -1,0 +1,7 @@
+library("testthat")
+library("ttTensor")
+library("rTensor")
+library("tensorr")
+library("PTAk")
+library("Matrix")
+test_check("ttTensor")
