@@ -12,7 +12,7 @@ function (A, Ranks = NULL, thr = 1e-10, num.iter = 30)
     for (k in 1:(nModes - 1)) {
         if (k == 1) {
             rk1 <- 1
-            C <- tensorr::unfold(C, 1)
+            C <- unfold(C, 1)
             C <- C@mat
         }
         else {

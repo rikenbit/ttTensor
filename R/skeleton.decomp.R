@@ -19,20 +19,20 @@ function (A, r, thr = 1e-10, num.iter = 30)
         Q <- as(Q, "sparseMatrix")
         I <- maxvol(Q)
         R <- A[I, ]
-        R <- t(R)
+        R <- Matrix::t(R)
         R <- as(R, "sparseMatrix")
         Q <- qr.Q(qr(R))
         Q <- as(Q, "sparseMatrix")
         J <- maxvol(Q)
         iter <- iter + 1
         Q_hat <- Q[J, ]
-        A <- A[, J] %*% t(Q %*% solve(Q_hat))
+        A <- A[, J] %*% Matrix::t(Q %*% solve(Q_hat))
         RecError[iter] <- sqrt(sum((A - A_bar)^2))
         RelChange[iter] <- abs(RecError[iter - 1] - RecError[iter])/RecError[iter]
     }
     U <- solve(A[I, J])
     U <- as(U, "sparseMatrix")
-    R <- t(R)
+    R <- Matrix::t(R)
     R <- as(R, "sparseMatrix")
     .is.sparse(C)
     .is.sparse(U)

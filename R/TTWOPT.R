@@ -30,10 +30,8 @@ function (X, Ranks, W = NULL, eta = 1e-07, thr = 1e-10, num.iter = 100)
     while ((RelChange[iter] > thr) && (iter < num.iter)) {
         Z <- W * .recTensor(G)
         for (n in seq_len(nModes)) {
-            Zn <- rTensor::unfold(Z, row_idx = setdiff(seq_len(nModes), 
-                n), col_idx = n)
-            Yn <- rTensor::unfold(Y, row_idx = setdiff(seq_len(nModes), 
-                n), col_idx = n)
+            Zn <- cs_unfold(Z, n)
+            Yn <- cs_unfold(Y, n)
             if (n == 1) {
                 Glgn <- .recTensor(G[2:nModes])
                 Glen <- 1
@@ -47,15 +45,13 @@ function (X, Ranks, W = NULL, eta = 1e-07, thr = 1e-10, num.iter = 100)
                 Glen <- .recTensor(G[1:(n - 1)])
             }
             if (length(dim(Glgn)) > 2) {
-                uGlgn <- rTensor::unfold(as.tensor(Glgn), row_idx = setdiff(seq_len(length(dim(Glgn))), 
-                  1), col_idx = 1)@data
+                uGlgn <- cs_unfold(as.tensor(Glgn), 1)@data
             }
             else {
                 uGlgn <- Glgn
             }
             if (length(dim(Glen)) > 2) {
-                uGlen <- rTensor::unfold(as.tensor(Glen), row_idx = setdiff(seq_len(length(dim(Glen))), 
-                  length(dim(Glen))), col_idx = length(dim(Glen)))@data
+                uGlen <- cs_unfold(as.tensor(Glen), length(dim(Glen)))@data
             }
             else {
                 uGlen <- Glen
@@ -72,11 +68,9 @@ function (X, Ranks, W = NULL, eta = 1e-07, thr = 1e-10, num.iter = 100)
                 grad <- t(grad)
             }
             dimGn <- dim(G[[n]])
-            tmpGn <- rTensor::unfold(as.tensor(G[[n]]), row_idx = 2, 
-                col_idx = setdiff(seq_len(length(dim(G[[n]]))), 
-                  2))@data
+            tmpGn <- rs_unfold(as.tensor(G[[n]]), 2)@data
             tmpGn = tmpGn - eta * grad
-            G[[n]] <- rTensor::fold(tmpGn, row_idx = 2, col_idx = setdiff(seq_len(length(dim(G[[n]]))), 
+            G[[n]] <- fold(tmpGn, row_idx = 2, col_idx = setdiff(seq_len(length(dim(G[[n]]))), 
                 2), modes = dimGn)@data
         }
         iter <- iter + 1
