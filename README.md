@@ -21,7 +21,7 @@ References
 
 ## License
 Copyright (c) 2019 Koki Tsuyuzaki and Laboratory for Bioinformatics Research, RIKEN Center for Biosystems Dynamics Reseach
-Released under the [Artistic License 2.0](http://www.perlfoundation.org/artistic_license_2_0).
+Released under the [Artistic License 2.0](https://www.perlfoundation.org/artistic-license-20.html).
 
 ## Authors
 - Koki Tsuyuzaki
