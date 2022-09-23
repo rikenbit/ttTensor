@@ -1,3 +1,13 @@
+[![DOI](https://zenodo.org/badge/168929183.svg)](https://zenodo.org/badge/latestdoi/168929183)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ttTensor)](
+https://cran.r-project.org/package=ttTensor)
+[![Downloads](https://cranlogs.r-pkg.org/badges/ttTensor)](https://CRAN.R-project.org/package=ttTensor)
+[![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ttTensor?color=orange)](https://CRAN.R-project.org/package=ttTensor)
+[![:name status badge](https://rikenbit.r-universe.dev/badges/:name)](https://rikenbit.r-universe.dev)
+[![:registry status badge](https://rikenbit.r-universe.dev/badges/:registry)](https://rikenbit.r-universe.dev)
+[![:total status badge](https://rikenbit.r-universe.dev/badges/:total)](https://rikenbit.r-universe.dev)
+[![ttTensor status badge](https://rikenbit.r-universe.dev/badges/ttTensor)](https://rikenbit.r-universe.dev)
+
 # ttTensor
 R package for Tensor-Train Decomposition
 
