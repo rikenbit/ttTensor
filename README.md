@@ -7,6 +7,7 @@ https://cran.r-project.org/package=ttTensor)
 [![:registry status badge](https://rikenbit.r-universe.dev/badges/:registry)](https://rikenbit.r-universe.dev)
 [![:total status badge](https://rikenbit.r-universe.dev/badges/:total)](https://rikenbit.r-universe.dev)
 [![ttTensor status badge](https://rikenbit.r-universe.dev/badges/ttTensor)](https://rikenbit.r-universe.dev)
+![GitHub Actions](https://github.com/rikenbit/ttTensor/actions/workflows/build_test_push.yml/badge.svg)
 
 # ttTensor
 R package for Tensor-Train Decomposition
