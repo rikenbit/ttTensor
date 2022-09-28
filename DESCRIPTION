@@ -11,5 +11,5 @@ Suggests: testthat
 Depends: R (>= 3.5.0)
 Imports: methods, rTensor, tensorr, PTAk, Matrix
 Description: Tensor-train is a compact representation for higher-order tensors. Some algorithms for performing tensor-train decomposition are available such as TT-SVD, TT-WOPT, and TT-Cross. For the details of the algorithms, see I. V. Oseledets (2011) <doi:10.1137/090752286>, Yuan Longao, et al (2017) <arXiv:1709.02641>, I. V. Oseledets (2010) <doi:10.1016/j.laa.2009.07.024>.
-License: Artistic-2.0
+License: MIT + file LICENSE
 URL: https://github.com/rikenbit/ttTensor
