@@ -65,8 +65,10 @@ function (X)
 {
     if ("Tensor" %in% is(X)) {
         out <- sqrt(sum((X * X)@data))
-    }
-    if ("sptensor" %in% is(X)) {
+    } else if ("simple_sparse_tensor" %in% class(X)) {
+        out <- sqrt(sum(X$data * X$data))
+    } else {
+        # For regular arrays/matrices
         out <- sqrt(sum(X * X))
     }
     out
@@ -88,10 +90,12 @@ function (X, Ranks)
 .is.sparse <-
 function (A) 
 {
-    checkSparseTensor <- "sptensor" %in% is(A)
+    checkSimpleSparseTensor <- "simple_sparse_tensor" %in% class(A)
     checkSparseMatrix <- "sparseMatrix" %in% is(A)
-    if (!checkSparseTensor && !checkSparseMatrix) {
-        stop(paste0("Please specify A as sptensor or sparseMatrix", 
-            "(cf. tensorr and Matrix)"))
+    checkTensor <- "Tensor" %in% is(A)
+    checkArray <- is.array(A) || is.matrix(A)
+    
+    if (!checkSimpleSparseTensor && !checkSparseMatrix && !checkTensor && !checkArray) {
+        stop("Please specify A as a tensor, array, matrix, or sparseMatrix")
     }
 }

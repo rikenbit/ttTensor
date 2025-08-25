@@ -1,7 +1,6 @@
 library("testthat")
 library("ttTensor")
 library("rTensor")
-library("tensorr")
 library("Matrix")
 
 options(testthat.use_colours = FALSE)

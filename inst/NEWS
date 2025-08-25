@@ -1,3 +1,9 @@
+VERSION 1.0.2
+------------------------
+   o Removed dependency on archived tensorr package
+   o Implemented minimal sparse tensor support to maintain compatibility
+   o Added as_sptensor(), dtensor(), and unfold() functions as replacements
+
 VERSION 1.0.1
 ------------------------
    o Resubmission to CRAN due to temporary inaccessibility of rTensor

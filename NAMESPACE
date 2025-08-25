@@ -1,5 +1,4 @@
 importFrom("rTensor", "as.tensor", "rand_tensor", "fold", "cs_unfold", "rs_unfold")
-importFrom("tensorr", "as_sptensor", "dtensor", "unfold")
 importFrom("PTAk", "CONTRACTION")
 importFrom("Matrix", "qr", "qr.Q")
 importFrom("methods", "as", "is")
@@ -10,5 +9,8 @@ export(
     TTWOPT,
     maxvol,
     skeleton.decomp,
-    TTCross
+    TTCross,
+    as_sptensor,
+    dtensor,
+    unfold
 	)

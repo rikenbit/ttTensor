@@ -13,7 +13,7 @@ function (A, Ranks = NULL, thr = 1e-10, num.iter = 30)
         if (k == 1) {
             rk1 <- 1
             C <- unfold(C, 1)
-            C <- C@mat
+            C <- C@data
         }
         else {
             rk1 <- Ranks[k - 1]

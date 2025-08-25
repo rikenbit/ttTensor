@@ -9,7 +9,6 @@ dimnames(X1) <- list(
     )
 X1 <- as.tensor(X1)
 X2 <- as_sptensor(dtensor(X1@data))
-dimnames(X2) <- dimnames(X1@data)
 Ranks <- c(p=2, q=4, r=6, s=8)
 # TTCross
 out.TTCross <- TTCross(X2, Ranks, num.iter=2)
